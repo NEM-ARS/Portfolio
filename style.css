@@ -1,0 +1,215 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    font-family: roboto;
+    /* background-color: #f4ebdb; */
+}
+/* 
+main{
+
+    overflow: hidden;
+} */
+
+
+nav{
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding-right: 10vw;
+    width: 500px;
+    height: 50px;
+    backdrop-filter: blur(5px);
+    border-radius: 50px 0 0 50px;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.296);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item{
+    width: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #2c4a52;
+}
+
+
+
+
+.Hblock{
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    min-height: 450px;
+}
+
+.Hblock> img{
+    width: 50vw;
+    object-fit: cover;
+}
+
+.Rig{
+    width: 50vw;
+    background: #537072;
+    box-shadow: 0px 0px 35px 40px #537072;
+    color: #2c4a52;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1{
+    font-size: 50px;
+    letter-spacing: 2px;
+    /* margin-top: 100px; */
+}
+.Rig>p{
+    margin-top: 40px;
+    max-width: 400px;
+    line-height: 25px;
+}
+  
+.sp{
+    color: #f4ebdb;
+    font-size: xx-large;
+}
+
+.icons{
+    max-width: 400px;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+li{
+    list-style: none;
+}
+
+.icon{
+    /* width: 30px; */
+    height: 35px;
+    transition: transform .3s;
+
+    /* margin-left: 10px; */
+}
+
+
+.i1{
+    animation: hhh 1s linear infinite alternate;
+}
+.i2{
+    animation: hhh 1s linear infinite 0.25s alternate;
+}
+.i3{
+    animation: hhh 1s linear infinite 0.50s alternate;
+}
+.i4{
+    animation: hhh 1s linear infinite 0.75s alternate;
+}
+@keyframes hhh {
+from{
+    filter: drop-shadow(0px 5px 5px #2c4a52);
+    transform: scale(1.2);
+
+}
+    to{
+        margin-top: 15px;
+
+    }
+}
+
+.icon:hover{
+    transform: scale(1.5);
+    animation-play-state: paused;
+}
+/* ////////////////////////////////////////////// */
+.box{
+    width: 100vw;
+    perspective: 500px;
+    margin: 0 auto;
+    perspective-origin: top;
+    position: sticky;
+    top: 0;
+    /* padding-top: 10px; */
+    overflow: hidden;
+}
+
+.win{
+    transform-origin: top;
+    height: 100vh;
+    width: 80vw;
+    margin: 0 auto;
+    /* display: flex; */
+    padding: 30px 0 30px 0;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    overflow: hidden;
+}
+
+.card{
+    overflow: hidden;
+    height: 90vh;
+    /* overflow: auto; */
+    /* height: 100%; */
+    padding: 5vh;
+    box-shadow: inset 0 0 4px 2px white, 0 0 3px 0px white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.card>h2{
+    margin: 10px 0;
+}
+
+.card__text{
+    height: 50%;
+    /* padding: 20px; */
+    overflow: auto;
+}
+
+.img-shadow{
+    /* width: 40vw; */
+    height: 40%;
+    margin: 0 auto;
+    transition: .3s;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+
+.card__img{
+    display: block;
+    box-shadow: 0 0 30px black;
+    /* width: 100%; */
+    height: 100%;
+
+}
+
+.card1{
+    background-color: #8e9b97;
+
+}
+.card2{
+    background-color: #8e9b97;
+
+}
+
+/* .win2{
+    background-color: #fff;
+} */
+
+.win3{
+    background-color: #537072;
+    width: 100%;
+    height: 30vh;
+    position: absolute;
+}
