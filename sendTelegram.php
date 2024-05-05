@@ -25,7 +25,7 @@ $message .= "Телефон:".$comment;
 $message .= "Email:".$email;
 
 /*токен который выдаётся при регистрации бота */
-$token = "1724061264:AAHTshrcn33459712fdsf2zM-bDviT-QgF0tAM";
+$token = "7046346946:AAHlVXqUR2_GmJqdz4HZuk9qvPikTHNg-b0";
 /*идентификатор группы*/
 $chat_id = "-4188715596";
 /*делаем запрос и отправляем сообщение*/
