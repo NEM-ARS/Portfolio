@@ -11,69 +11,53 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="item">обо мне</div>
-            <div class="item">работы</div>
-            <div class="item">контакты</div>
+        <nav class="nav">
+            <div class="nav__item">обо мне</div>
+            <div class="nav__item">работы</div>
+            <div class="nav__item">контакты</div>
         </nav>
     </header>
     
     <main>
-        <div class="win3">  
-            <div class="col-1 col">
+        <div class="section">  
+            <div class="section__block-1">
             <img src="./images/my_foto1.jpg" alt="Foto portfolio">
 
             </div>
-            <div class="col-2 col">
-                <h1><span class="sp">my</span>Portfolio</h1>
+            <div class="section__block-2">
+                <h1><span class="selected-text">my</span>Portfolio</h1>
             </div>
-            <div class="col-3 col">
-                <p>Привет, я <span class="sp">Арсений</span>! 
-                <br>С каждым днем я все больше развиваюсь как 
-                <br><span class="sp">Фронтенд разработчик</span>.
-                <br>Умею верстать адаптивные сайты под планшеты и мобильные устройства.
-                <br>Мои профессиональные навыки <span class="sp">&#8595</span>
+            <div class="section__block-3">
+                <p>
+                    Привет, я <span class="selected-text">Арсений</span>! 
+                    <br>С каждым днем я все больше развиваюсь как 
+                    <br><span class="selected-text">Фронтенд разработчик</span>.
+                    <br>Умею верстать адаптивные сайты под планшеты и мобильные устройства.
+                    <br>Мои профессиональные навыки <span class="selected-text">&#8595</span>
                 </p>
-            <ul class="icons">
-                <li ><img src="./icons/html-5.svg" class="icon i1" alt=""></li>
-                <li ><img src="./icons/css-3.svg" class="icon i2" alt=""></li>
-                <li ><img src="./icons/javascript.svg" class="icon i3" alt=""></li>
-                <li ><img src="./icons/photoshop.svg" class="icon i4" alt=""></li>
+            <ul class="section__icons">
+                <li ><img src="./icons/html-5.svg" class="section__icon i1" alt=""></li>
+                <li ><img src="./icons/css-3.svg" class="section__icon i2" alt=""></li>
+                <li ><img src="./icons/javascript.svg" class="section__icon i3" alt=""></li>
+                <li ><img src="./icons/photoshop.svg" class="section__icon i4" alt=""></li>
             </ul> 
             </div>
         </div>  
-        <!-- <section class="Hblock">
-            
-            <img src="./images/my_foto1.jpg" alt="Foto portfolio">
-            <div class="Rig">
-                <h1><span class="sp">my</span>Portfolio</h1>
-                <p>Привет, я <span class="sp">Арсений</span>! 
-                <br>С каждым днем я все больше развиваюсь как 
-                <br><span class="sp">Фронтенд разработчик</span>.
-                <br>Умею верстать адаптивные сайты под планшеты и мобильные устройства.
-                <br>Мои профессиональные навыки <span class="sp">&#8595</span>
-            </p>
-            <ul class="icons">
-                <li ><img src="./icons/html-5.svg" class="icon i1" alt=""></li>
-                <li ><img src="./icons/css-3.svg" class="icon i2" alt=""></li>
-                <li ><img src="./icons/javascript.svg" class="icon i3" alt=""></li>
-                <li ><img src="./icons/photoshop.svg" class="icon i4" alt=""></li>
-            </ul> 
-           </div>
 
-        </section> -->
-        
         <div class="box">
 
             <div class="win1 win">
 
                 <div class="card card1">
                     <div class="img-shadow">
-                        <img src="./images/aquarium.jpg" alt="" class="card__img">
+                        <div class="img">
+                            <img src="./images/aquarium.jpg" alt="" class="card__img">
+                            
+                        </div>
+                        <h2 class="selected-text">Аквариум</h2>
+                        <p></p>
                         
                     </div>
-                    <h2 class="sp">Аквариум</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
                     </img>
                 </div>
             </div>
@@ -83,16 +67,17 @@
             <div class="win2 win">
                 <div class="card card2">
                     <div class="img-shadow">
-                        <img src="./images/Note_board.jpg" alt="" class="card__img"></img>
-                        
-                    </div>
-                    <h2 class="sp">Доска для заметок</h2>
-                    <div class="card__text">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
-                    
-
+                        <div class="img">
+                            <img src="./images/Note_board.jpg" alt="" class="card__img"></img>
+                            
+                        </div>  
+                        <h2 class="selected-text">Доска для заметок</h2>
+                        <div class="card__text">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
+    
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,16 +87,19 @@
             <div class="win2 win">
                 <div class="card card2">
                     <div class="img-shadow">
-                        <img src="./images/Timer.jpg" alt="" class="card__img"></img>
+                        <div class="img">
+                            <img src="./images/Timer.jpg" alt="" class="card__img"></img>
+                            
+                        </div>
+                        <h2 class="selected-text">Доска для заметок</h2>
                         
-                    </div>
-                    <h2 class="sp">Доска для заметок</h2>
-                    <div class="card__text">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
-                    
-
+                        <div class="card__text">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
+                            <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p> -->
+                        
+    
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,9 +107,6 @@
      
     </main>
 
-    <!-- <footer>
-
-    </footer> -->
     <script src="script.js"></script>
 </body>
 </html>
