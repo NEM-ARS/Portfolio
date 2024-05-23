@@ -14,10 +14,11 @@ let win = document.querySelectorAll('.win');
 //     })
 
 // }
+rotateFrame()
 
+window.onscroll = ()=> rotateFrame();
 
-window.onscroll = function(e){
-
+function rotateFrame(){
     win.forEach((item)=>{
         item.style.transform = `rotateX(${0}deg)`;
         if(item.getBoundingClientRect().top>0 && item.getBoundingClientRect().top < window.innerHeight){
@@ -32,6 +33,4 @@ window.onscroll = function(e){
 
         }
     })
-
 }
-
