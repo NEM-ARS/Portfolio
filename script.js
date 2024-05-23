@@ -1,4 +1,4 @@
-let win = document.querySelectorAll('.win');
+let win = document.querySelectorAll('.box');
 
 // window.onscroll = function(e){
 //     win.forEach((item)=>{
@@ -20,16 +20,20 @@ window.onscroll = ()=> rotateFrame();
 
 function rotateFrame(){
     win.forEach((item)=>{
-        item.style.transform = `rotateX(${0}deg)`;
-        if(item.getBoundingClientRect().top>0 && item.getBoundingClientRect().top < window.innerHeight){
+            // console.log(Math.floor(item.getBoundingClientRect().top), window.innerHeight);
+        // item.style.transform = `rotateX(${0}deg)`;
+        if(Math.floor(item.getBoundingClientRect().top) < window.innerHeight){
+            let gg =item.querySelector('.win')
+            // let gg = item.closest(win)
+            
             let lll = Math.floor(80*(item.getBoundingClientRect().top/window.innerHeight));
+            console.log(lll)
             let op = (window.innerHeight-item.getBoundingClientRect().top)/window.innerHeight;
-            item.style.transform = `rotateX(${lll}deg)`;
-            item.style.opacity = op.toFixed(2);
-            // console.log(item);
-        }else{
-            item.style.transform = `rotateX(${0}deg)`;
-            item.style.opacity = 1
+            gg.style.transform = lll>0?`rotateX(${lll}deg)`:"rotateX(0deg)";
+            gg.style.opacity = op.toFixed(2);
+        // }else{
+        //     item.style.transform = `rotateX(${0}deg)`;
+        //     item.style.opacity = 1
 
         }
     })
