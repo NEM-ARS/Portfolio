@@ -27,7 +27,7 @@ function rotateFrame(){
             // let gg = item.closest(win)
             
             let lll = Math.floor(80*(item.getBoundingClientRect().top/window.innerHeight));
-            console.log(lll)
+            // console.log(lll)
             let op = (window.innerHeight-item.getBoundingClientRect().top)/window.innerHeight;
             gg.style.transform = lll>0?`rotateX(${lll}deg)`:"rotateX(0deg)";
             gg.style.opacity = op.toFixed(2);
@@ -37,4 +37,19 @@ function rotateFrame(){
 
         }
     })
+}
+
+let anchors = document.querySelectorAll('header a[href*="#"]');
+
+for (let anchor of anchors) {
+  if (anchor) {
+    anchor.addEventListener('click', function(e){
+      e.preventDefault();
+      console.log(anchor)
+      let anchorId = this.getAttribute('href');
+      document.querySelector(anchorId).scrollIntoView({
+        behavior: 'smooth', block: 'start'
+      })
+    })
+  }
 }

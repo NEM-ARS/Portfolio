@@ -12,14 +12,14 @@
 <body>
     <header>
         <nav class="nav">
-            <div class="nav__item">обо мне</div>
-            <div class="nav__item">работы</div>
-            <div class="nav__item">контакты</div>
+            <a href="#about" class="nav__item">обо мне</a>
+            <a href="#works" class="nav__item">работы</a>
+            <a href="#contact" class="nav__item">контакты</a>
         </nav>
     </header>
     
     <main>
-        <div class="section">  
+        <div class="section" id="about">  
             <div class="section__block-1">
             <img src="./images/my_foto1.jpg" alt="Foto portfolio">
 
@@ -40,22 +40,28 @@
                 <li ><img src="./icons/css-3.svg" class="section__icon i2" alt=""></li>
                 <li ><img src="./icons/javascript.svg" class="section__icon i3" alt=""></li>
                 <li ><img src="./icons/photoshop.svg" class="section__icon i4" alt=""></li>
+                <li ><img src="./icons/figma.svg" width="30px" class="section__icon i5" alt=""></li>
             </ul> 
             </div>
         </div>  
-
-        <div class="box">
+        <div id="works"></div>
+        <div class="box mt">
 
             <div class="win1 win">
 
                 <!-- <div class="card card1"> -->
                     <div class="img-shadow">
                         <div class="img">
-                            <img src="./images/aquarium.jpg" alt="" class="card__img">
+                            <a href="https://nem-ars.github.io/Undersea_world/" target="_blank">
+                                <img src="./images/aquarium.jpg" alt="" class="card__img">
+                            </a>
                             
                         </div>
-                        <h2 class="selected-text">Аквариум</h2>
-                        <p></p>
+                        <h2 class="selected-text">Поводный мир</h2>
+                        <div class="card__text">
+                            <p>Подводный мир - это возможность оказаться наедине с водными обитателями и послушать как они общаются.
+                                Можно управлять количеством рыб, находить пасхалки, а так же дополнять своими рыбами. </p>
+                        </div>
                         
                     </div>
                 <!-- </div> -->
@@ -67,15 +73,17 @@
                 <!-- <div class="card card2"> -->
                     <div class="img-shadow">
                         <div class="img">
-                            <img src="./images/Note_board.jpg" alt="" class="card__img"></img>
+                            <a href="https://nem-ars.github.io/Note-board/" target="_blank">
+                                <img src="./images/Note_board.jpg" alt="" class="card__img">
+                            </a>
                             
                         </div>  
                         <h2 class="selected-text">Доска для заметок</h2>
                         <div class="card__text">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
-    
+                            <p>
+                                Доска для заметок позволяет разместить множество стикеров, которые можно передвигать по доске, менять цвет, редактировать и удалять.
+                                 Все текущие заметки сохраняются в локальном хранилище, а это значит что при закрытии вкладки, данные не пропадают.
+                            </p>    
                         </div>
                     </div>
                 <!-- </div> -->
@@ -87,26 +95,63 @@
                 <!-- <div class="card card2"> -->
                     <div class="img-shadow">
                         <div class="img">
-                            <img src="./images/Timer.jpg" alt="" class="card__img"></img>
+                            <a href="https://nem-ars.github.io/test/" target="_blank">
+                                <img src="./images/Timer.jpg" class="card__img">
+                            </a>
                             
                         </div>
-                        <h2 class="selected-text">Доска для заметок</h2>
+                        <h2 class="selected-text">Таймер</h2>
                         
                         <div class="card__text">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
-                            <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus aliquid totam itaque dolores ipsam iure temporibus qui necessitatibus vitae ab quisquam animi perspiciatis velit voluptatibus esse ad hic, reprehenderit pariatur.</p> -->
-                        
-    
+                            <p>
+                                Таймер - это одно из тестовых заданий, в котором реализован таймер от заданной и до конечной даты. 
+                                К примеру можно установить таймер до начала скидок, или другого события. 
+                            </p>
                         </div>
                     </div>
                 <!-- </div> -->
             </div>
         </div>
-        <div class="img-shadow"></div>
      
     </main>
-
+    <footer class="footer">
+        <ul class="section__icons contact" id="contact">
+            <li>
+                <a href="mailto:nemkovich69@gmail.com" class="contact-icon" target="_blank">
+                    <img src="./icons/gmail1.svg" class="section__icon" alt="">
+                    <span>
+                        Gmail
+                    </span>
+                </a>
+            </li>
+            <li >
+                <a href="https://t.me/N_Arseni" class="contact-icon" target="_blank">
+                    <img src="./icons/telegram1.svg" class="section__icon" alt="">
+                    <span>
+                        Telegram
+                    </span>
+                </a>
+            </li>
+            <li >
+                <a href="https://github.com/NEM-ARS" class="contact-icon" target="_blank">
+                    <img src="./icons/github.svg" class="section__icon" alt="">
+                    <span>
+                        Github
+                    </span>
+                </a>
+            </li>
+            <li >
+                <a href="./images/Nemkovich Arseni resume.pdf" download class="contact-icon">
+                    <img src="./icons/pdf_logo.svg" class="section__icon" alt="">
+                    <span>
+                        Резюме
+                    </span>
+                </a>
+            </li>
+            <!-- <li ><img src="./icons/pdf_logo.svg" class="section__icon" alt="">Резюме</li> -->
+            <!-- <a href="./images/Nemkovich Arseni resume.pdf" download><li ><img src="./icons/pdf_logo.svg" class="section__icon" alt="">Резюме</li></a> -->
+        </ul> 
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
