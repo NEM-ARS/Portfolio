@@ -1,157 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fonts/fonts.css">
 </head>
+
 <body>
+    <div class="preloader">
+        <div><span class="selected-text "></span></div>
+    </div>
     <header>
-        <nav class="nav">
+        <nav class="nav anim">
             <a href="#about" class="nav__item">обо мне</a>
             <a href="#works" class="nav__item">работы</a>
             <a href="#contact" class="nav__item">контакты</a>
         </nav>
     </header>
-    
-    <main>
-        <div class="section" id="about">  
-            <div class="section__block-1">
-            <img src="./images/my_foto1.jpg" alt="Foto portfolio">
 
+    <main>
+        <div class="about" id="about">
+            <div class="about__img about-anim anim">
+                <img src="./images/my_foto1.jpg" alt="Foto portfolio">
             </div>
-            <div class="section__block-2">
-                <h1><span class="selected-text">my</span>Portfolio</h1>
+            <div class="about__title about-anim anim">
+                <h1><span class="selected-text ">my</span>Portfolio</h1>
             </div>
-            <div class="section__block-3">
+            <div class="about__text about-anim anim">
                 <p>
-                    Привет, я <span class="selected-text">Арсений</span>! 
-                    <br>С каждым днем я все больше развиваюсь как 
+                    Привет, я <span class="selected-text">Арсений</span>!
+                    <br>С каждым днем я все больше развиваюсь как
                     <br><span class="selected-text">Фронтенд разработчик</span>.
                     <br>Умею верстать адаптивные сайты под планшеты и мобильные устройства.
                     <br>Мои профессиональные навыки <span class="selected-text">&#8595</span>
                 </p>
-            <ul class="section__icons">
-                <li ><img src="./icons/html-5.svg" width="30px" class="section__icon i1" alt=""></li>
-                <li ><img src="./icons/css-3.svg" width="30px" class="section__icon i2" alt=""></li>
-                <li ><img src="./icons/javascript.svg" width="30px" class="section__icon i3" alt=""></li>
-                <li ><img src="./icons/photoshop.svg" width="30px" class="section__icon i4" alt=""></li>
-                <li ><img src="./icons/figma.svg" width="30px" class="section__icon i5" alt=""></li>
-            </ul> 
+                <ul class="about__icons about-anim anim">
+                    <li><img src="./icons/html-5.svg" class="about__icon" title="html-5" alt="html-5"></li>
+                    <li><img src="./icons/css-3.svg" class="about__icon" title="css-3" alt="css-3"></li>
+                    <li><img src="./icons/javascript.svg" class="about__icon" title="javascript" alt="javascript"></li>
+                    <li><img src="./icons/photoshop.svg" class="about__icon" title="photoshop" alt="photoshop"></li>
+                    <li><img src="./icons/figma.svg" class="about__icon" title="figma" alt="figma"></li>
+                    <li><img src="./icons/git.svg" class="about__icon" title="git" alt="git"></li>
+                </ul>
             </div>
-        </div>  
+        </div>
+        
         <div id="works"></div>
-        <div class="box mt">
 
-            <div class="win1 win">
+        <div class="section section--mt">
+            <div class="section__wrapper win1">
+                <div class="section__container">
+                    <a href="https://ukendoit.online/" target="_blank" class="section__img-wrapper">
+                        <img src="./images/ukendoit.jpg" alt="" class="section__img">
+                    </a>
 
-                <!-- <div class="card card1"> -->
-                    <div class="img-shadow">
-                        <div class="img">
-                            <a href="https://nem-ars.github.io/Undersea_world/" target="_blank">
-                                <img src="./images/aquarium.jpg" alt="" class="card__img">
-                            </a>
-                            
-                        </div>
-                        <h2 class="selected-text">Поводный мир</h2>
-                        <div class="card__text">
-                            <p>Подводный мир - это возможность оказаться наедине с водными обитателями и послушать как они общаются.
-                                Можно управлять количеством рыб, находить пасхалки, а так же дополнять своими рыбами. </p>
-                        </div>
-                        
-                    </div>
-                <!-- </div> -->
+                    <h2 class="selected-text">Сайт-визитка</h2>
+
+                    <p class="section__text">Сайт адаптирован под различные устройства. Пункты навигации дополнены
+                        анимацией и
+                        аудиоэффектоми.
+                        Реализован горизонтальный скролл без сторонних библиотек. Появление элементов при скролле и
+                        многое другое.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="box">
 
-            <div class="win2 win">
-                <!-- <div class="card card2"> -->
-                    <div class="img-shadow">
-                        <div class="img">
-                            <a href="https://nem-ars.github.io/Note-board/" target="_blank">
-                                <img src="./images/Note_board.jpg" alt="" class="card__img">
-                            </a>
-                            
-                        </div>  
-                        <h2 class="selected-text">Доска для заметок</h2>
-                        <div class="card__text">
-                            <p>
-                                Доска для заметок позволяет разместить множество стикеров, которые можно передвигать по доске, менять цвет, редактировать и удалять.
-                                 Все текущие заметки сохраняются в локальном хранилище, а это значит что при закрытии вкладки, данные не пропадают.
-                            </p>    
-                        </div>
-                    </div>
-                <!-- </div> -->
+        <div class="section">
+            <div class="section__wrapper win2">
+                <div class="section__container">
+                    <a href="https://nem-ars.github.io/Undersea_world/" target="_blank" class="section__img-wrapper">
+                        <img src="./images/aquarium.jpg" alt="" class="section__img">
+                    </a>
+
+                    <h2 class="selected-text">Поводный мир</h2>
+
+                    <p class="section__text">Подводный мир - это возможность оказаться наедине с водными обитателями и
+                        послушать как они
+                        общаются.
+                        Можно управлять количеством рыб, находить пасхалки, а так же дополнять своими рыбами.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="box">
 
-            <div class="win3 win">
-                <!-- <div class="card card2"> -->
-                    <div class="img-shadow">
-                        <div class="img">
-                            <a href="https://nem-ars.github.io/test/" target="_blank">
-                                <img src="./images/Timer.jpg" class="card__img">
-                            </a>
-                            
-                        </div>
-                        <h2 class="selected-text">Таймер</h2>
-                        
-                        <div class="card__text">
-                            <p>
-                                Таймер - это одно из тестовых заданий, в котором реализован таймер от заданной и до конечной даты. 
-                                К примеру можно установить таймер до начала скидок, или другого события. 
-                            </p>
-                        </div>
-                    </div>
-                <!-- </div> -->
+        <div class="section">
+            <div class="section__wrapper win3">
+                <div class="section__container">
+                    <a href="https://nem-ars.github.io/Note-board/" target="_blank" class="section__img-wrapper">
+                        <img src="./images/Note_board.jpg" alt="" class="section__img">
+                    </a>
+
+                    <h2 class="selected-text">Доска для заметок</h2>
+
+                    <p class="section__text">
+                        Доска для заметок позволяет разместить множество стикеров, которые можно передвигать по
+                        доске, менять цвет, редактировать и удалять.
+                        Все текущие заметки сохраняются в локальном хранилище, а это значит, что при закрытии
+                        вкладки, данные не пропадают.
+                    </p>
+                </div>
             </div>
         </div>
-     
+
+        <div class="section">
+            <div class="section__wrapper">
+                <div class="section__container">
+                    <a href="https://nem-ars.github.io/test/" target="_blank" class="section__img-wrapper">
+                        <img src="./images/Timer.jpg" class="section__img">
+                    </a>
+
+                    <h2 class="selected-text">Таймер</h2>
+
+                    <p class="section__text">
+                        Таймер - это одно из тестовых заданий, в котором реализован таймер от заданной и до конечной
+                        даты.
+                        К примеру, можно установить таймер до начала скидок или другого события.
+                    </p>
+                </div>
+            </div>
+        </div>
     </main>
+    
     <footer class="footer">
-        <ul class="section__icons contact" id="contact">
+        <ul class="about__icons contact" id="contact">
             <li>
                 <a href="mailto:nemkovich69@gmail.com" class="contact-icon" target="_blank">
-                    <img src="./icons/gmail1.svg" class="section__icon" alt="">
+                    <img src="./icons/gmail.svg" class="about__icon" alt="">
                     <span>
                         Gmail
                     </span>
                 </a>
             </li>
-            <li >
+            <li>
                 <a href="https://t.me/N_Arseni" class="contact-icon" target="_blank">
-                    <img src="./icons/telegram1.svg" class="section__icon" alt="">
+                    <img src="./icons/telegram.svg" class="about__icon" alt="">
                     <span>
                         Telegram
                     </span>
                 </a>
             </li>
-            <li >
+            <li>
                 <a href="https://github.com/NEM-ARS" class="contact-icon" target="_blank">
-                    <img src="./icons/github.svg" class="section__icon" alt="">
+                    <img src="./icons/github.svg" class="about__icon" alt="">
                     <span>
                         Github
                     </span>
                 </a>
             </li>
-            <li >
+            <li>
                 <a href="./images/Nemkovich Arseni resume.pdf" download class="contact-icon">
-                    <img src="./icons/pdf_logo.svg" class="section__icon" alt="">
+                    <img src="./icons/pdf_logo.svg" class="about__icon" alt="">
                     <span>
                         Резюме
                     </span>
                 </a>
             </li>
-            <!-- <li ><img src="./icons/pdf_logo.svg" class="section__icon" alt="">Резюме</li> -->
-            <!-- <a href="./images/Nemkovich Arseni resume.pdf" download><li ><img src="./icons/pdf_logo.svg" class="section__icon" alt="">Резюме</li></a> -->
-        </ul> 
+        </ul>
     </footer>
-    <script src="script.js"></script>
+
+<script src="script.js"></script>
+
 </body>
+
 </html>

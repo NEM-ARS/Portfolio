@@ -1,51 +1,28 @@
-let win = document.querySelectorAll('.box');
+let frames = document.querySelectorAll('.section');
 
-// window.onscroll = function(e){
-//     win.forEach((item)=>{
-//         let lll = Math.floor(80*(item.getBoundingClientRect().top/window.innerHeight));
-//         if(item.getBoundingClientRect().top < window.innerHeight && item.getBoundingClientRect().top>0){
-//             item.style.transform = `rotateX(${lll}deg)`;
-//             // console.log(item)
-//         }
-//         else{
-//             item.style.transform = `rotateX(${0}deg)`;
+window.addEventListener('scroll', () => rotateFrame())
 
-//         }
-//     })
+rotateFrame();
 
-// }
-rotateFrame()
+function rotateFrame() {
+  for (let i = 0; i < frames.length; i++) {
 
-window.onscroll = ()=> rotateFrame();
+    let frame = frames[i].querySelector('.section__wrapper');
+    let frameTop = frames[i].getBoundingClientRect().top;
+    let distance = frameTop / window.innerHeight;
 
-function rotateFrame(){
-    win.forEach((item)=>{
-            // console.log(Math.floor(item.getBoundingClientRect().top), window.innerHeight);
-        // item.style.transform = `rotateX(${0}deg)`;
-        if(Math.floor(item.getBoundingClientRect().top) < window.innerHeight){
-            let gg =item.querySelector('.win')
-            // let gg = item.closest(win)
-            
-            let lll = Math.floor(80*(item.getBoundingClientRect().top/window.innerHeight));
-            // console.log(lll)
-            let op = (window.innerHeight-item.getBoundingClientRect().top)/window.innerHeight;
-            gg.style.transform = lll>0?`rotateX(${lll}deg)`:"rotateX(0deg)";
-            gg.style.opacity = op.toFixed(2);
-        // }else{
-        //     item.style.transform = `rotateX(${0}deg)`;
-        //     item.style.opacity = 1
+    frame.style.transform = frameTop > 0 ? `rotateX(${40 * distance}deg)` : "rotateX(0deg)";
+    frame.style.opacity = frameTop > 0 ? 1 - (1 * distance) : 1;
+  }
 
-        }
-    })
 }
 
 let anchors = document.querySelectorAll('header a[href*="#"]');
 
 for (let anchor of anchors) {
   if (anchor) {
-    anchor.addEventListener('click', function(e){
+    anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      console.log(anchor)
       let anchorId = this.getAttribute('href');
       document.querySelector(anchorId).scrollIntoView({
         behavior: 'smooth', block: 'start'
@@ -53,3 +30,34 @@ for (let anchor of anchors) {
     })
   }
 }
+
+let loadText = 'myPortfolio'
+
+let preloader = document.querySelector('.preloader div')
+let letterIndex = 0;
+
+let loadAnim = setInterval(() => {
+  if (letterIndex < loadText.length) {
+    if (letterIndex < 2) {
+      preloader.insertAdjacentHTML('beforeend', `<span class="selected-text ">${loadText[letterIndex]}</span>`)
+    } else {
+      preloader.append(loadText[letterIndex])
+    }
+    letterIndex++;
+  } else if (document.readyState == "complete") {
+    window.scrollTo(0, 0)
+
+    clearInterval(loadAnim)
+    document.querySelector('.preloader').style.transform = 'translateX(-100%)';
+    setTimeout(() => {
+      document.querySelectorAll('.anim').forEach(item => {
+        item.style.cssText = `
+    opacity: 1;
+    transform: translate(0);`})
+    }, 600)
+  } else {
+
+    preloader.innerText = '';
+    letterIndex = 0;
+  }
+}, 100)
