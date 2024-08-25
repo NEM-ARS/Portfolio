@@ -17,18 +17,19 @@ function rotateFrame() {
 
 }
 
-let anchors = document.querySelectorAll('header a[href*="#"]');
+const anchors = document.querySelectorAll('a[href*="#"]')
 
 for (let anchor of anchors) {
-  if (anchor) {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      let anchorId = this.getAttribute('href');
-      document.querySelector(anchorId).scrollIntoView({
-        behavior: 'smooth', block: 'start'
-      })
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    
+    const blockID = this.getAttribute('href').substr(1)
+    
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
     })
-  }
+  })
 }
 
 let loadText = 'myPortfolio'
